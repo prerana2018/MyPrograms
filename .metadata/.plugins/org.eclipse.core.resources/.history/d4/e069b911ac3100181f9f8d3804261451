@@ -39,7 +39,9 @@ public class FacebookLogin
 	{
 		driver.get("https://accounts.google.com/ServiceLogin");
 		driver.findElement(By.xpath("//input[@type='email']")).sendKeys("prerana.aug@gmail.com");
-		
+		driver.findElement(By.xpath("//div[@id='identifierNext']")).click();
+		driver.findElement(By.xpath("//input[@type='password' and @name='password']")).sendKeys("maatara@2808");
+		driver.findElement(By.xpath("//div[@id='passwordNext']")).click();
 	}
 	@AfterMethod
 	public void closeBrowser()
